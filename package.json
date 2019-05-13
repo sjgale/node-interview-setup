@@ -4,6 +4,7 @@
   "description": "An almost empty project setup with Mocha for use with pairing interviews",
   "main": "index.js",
   "scripts": {
+    "test-watch": "./node_modules/.bin/mocha **/*.spec.js --timeout 20000 -w",
     "test": "./node_modules/.bin/mocha **/*.spec.js --timeout 20000"
   },
   "repository": {
