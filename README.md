@@ -1,10 +1,19 @@
-# node-interview-setup
+# NodeJS Pairing Interview Starter
 An overly simple express app, used for pairing with node candidates during interviews.
 
-After cloning this repo, run `npm i` to install any dependencies. An few simple routes are set up in `index.js`, with tests in  `index.spec.js`.
+## Set-up Steps
+Clone this repo into a new directory.
+Run `npm i` to install NPM dependencies.
+
+## What's included:
+A few simple routes are set up in `index.js`. A basic, non-comprehensive set of tests are found in `index.spec.js`.
 
 To run tests, run `npm test` or `npm test-watch`.
 To start the express app run `node start`.
+An example of a currrently working endpoint would be:
+```POST http://localhost:3010/sum
+Headers: Content-Type: application/json
+Body: "{"numbers":[1,2,3]}"```
 
 Some possible pairing ideas:
 * Add additional endpoints to the existing API, like subtract or multiply.
