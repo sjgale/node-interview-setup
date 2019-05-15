@@ -7,11 +7,7 @@ app.use(helmet())
 app.use(bodyParser.json())
 
 app.post('/sum', sum)
-
-app.get('/', (req, res, next) => {
-    res.send('{"status":"Working swell!"}')
-})
-
+app.get('/health', health)
 app.use('*', fourOhFour)
 
 function sum(req, res, next) {
@@ -20,8 +16,12 @@ function sum(req, res, next) {
     res.send({sum})
 }
 
+function health(req, res, next) {
+    res.status(200).send('{"status":"Still kicking!"}')
+}
+
 function fourOhFour(req, res, next) {
     res.status(404).send()
 }
 
-module.exports = {app, sum}
+module.exports = {app, sum, health, fourOhFour}
