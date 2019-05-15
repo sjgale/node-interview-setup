@@ -13,7 +13,8 @@ To start the express app run `node start`.
 An example of a currrently working endpoint would be:
 ```POST http://localhost:3010/sum
 Headers: Content-Type: application/json
-Body: "{"numbers":[1,2,3]}"```
+Body: "{"numbers":[1,2,3]}"
+```
 
 Some possible pairing ideas:
 * Add additional endpoints to the existing API, like subtract or multiply.
