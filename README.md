@@ -11,7 +11,8 @@ A few simple routes are set up in `index.js`. A basic, non-comprehensive set of 
 To run tests, run `npm test` or `npm test-watch`.
 To start the express app run `node start`.
 An example of a currrently working endpoint would be:
-```POST http://localhost:3010/sum
+```
+POST http://localhost:3010/sum
 Headers: Content-Type: application/json
 Body: "{"numbers":[1,2,3]}"
 ```
