@@ -3,12 +3,16 @@ const express = require('express')
 const helmet = require('helmet')
 
 const app = express()
-app.use(helmet)
-app.use(bodyParser)
+app.use(helmet())
+app.use(bodyParser.json())
 
 app.post('/sum', sum)
 
-app.use('/', fourOhFour)
+app.get('/', (req, res, next) => {
+    res.send('{"status":"Working swell!"}')
+})
+
+app.use('*', fourOhFour)
 
 function sum(req, res, next) {
     const numbers = req.body.numbers

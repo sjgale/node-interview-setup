@@ -16,7 +16,7 @@ describe('application', () => {
         nextStub = sinon.stub()
     })
     
-    describe('add()', () => {
+    describe('sum()', () => {
         beforeEach(() => {
             reqStub.body.numbers = [1,2,3]
             sum(reqStub, resStub, nextStub)            
